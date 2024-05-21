@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadBook">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="#7BF4FF">
+
+        <ImageButton
+            android:layout_marginLeft="1dp"
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:background="#7BF4FF"
+            android:layout_marginRight="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clipToOutline="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/ic_user"
+                android:src="@drawable/search_icon" />
+
+            <ImageView
+                android:id="@+id/ic_user"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clipToOutline="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_icon" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#2C7BF4FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đang đọc:"
+                android:textSize="20dp"
+                android:textColor="#2196F3"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_name_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="20dp"
+                android:textColor="#2196F3"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHƯƠNG: "
+                    android:textSize="20dp"
+                    android:textColor="#2196F3"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="20dp"
+                    android:textColor="#2196F3"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/relative_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/bg_white_boder_gray_info_book"
+            android:orientation="vertical">
+            <TextView
+                android:padding="20dp"
+                android:id="@+id/tv_content_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="690dp">
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#7BF4FF"
+                android:text="Chương trước"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/btn_prev"
+                android:backgroundTint="#7BF4FF"
+                android:text="Chương sau"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

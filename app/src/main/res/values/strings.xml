@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">C_Book</string>
+
+    <string name="btm_home">Trang Chủ</string>
+    <string name="btm_favorite">Yêu Thích</string>
+    <string name="btm_history">Lịch sử</string>
+</resources>
